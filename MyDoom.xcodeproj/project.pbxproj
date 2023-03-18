@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		93220DB329C41270009F22C9 /* MyDoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DB229C41270009F22C9 /* MyDoomApp.swift */; };
-		93220DB529C41270009F22C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DB429C41270009F22C9 /* ContentView.swift */; };
+		93220DB529C41270009F22C9 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DB429C41270009F22C9 /* MapListView.swift */; };
 		93220DB729C41271009F22C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93220DB629C41271009F22C9 /* Assets.xcassets */; };
 		93220DBB29C41271009F22C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93220DBA29C41271009F22C9 /* Preview Assets.xcassets */; };
 		93220DC529C41271009F22C9 /* MyDoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DC429C41271009F22C9 /* MyDoomTests.swift */; };
 		93220DCF29C41271009F22C9 /* MyDoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DCE29C41271009F22C9 /* MyDoomUITests.swift */; };
 		93220DD129C41271009F22C9 /* MyDoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DD029C41271009F22C9 /* MyDoomUITestsLaunchTests.swift */; };
+		93220DDE29C41280009F22C9 /* DoomEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DDD29C41280009F22C9 /* DoomEngine.swift */; };
+		93220DE029C412B1009F22C9 /* doom1.wad in Resources */ = {isa = PBXBuildFile; fileRef = 93220DDF29C412B1009F22C9 /* doom1.wad */; };
+		93220DE229C412C5009F22C9 /* WADReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DE129C412C5009F22C9 /* WADReader.swift */; };
+		93220DE429C57409009F22C9 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DE329C57409009F22C9 /* Map.swift */; };
+		93220DE629C57ADA009F22C9 /* MapVertexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DE529C57ADA009F22C9 /* MapVertexView.swift */; };
+		93220DE829C5A8DF009F22C9 /* Lump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DE729C5A8DF009F22C9 /* Lump.swift */; };
+		93220DEB29C67789009F22C9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 93220DEA29C67789009F22C9 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		93220DAF29C41270009F22C9 /* MyDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93220DB229C41270009F22C9 /* MyDoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomApp.swift; sourceTree = "<group>"; };
-		93220DB429C41270009F22C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93220DB429C41270009F22C9 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		93220DB629C41271009F22C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93220DB829C41271009F22C9 /* MyDoom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDoom.entitlements; sourceTree = "<group>"; };
 		93220DBA29C41271009F22C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +52,12 @@
 		93220DCA29C41271009F22C9 /* MyDoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93220DCE29C41271009F22C9 /* MyDoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomUITests.swift; sourceTree = "<group>"; };
 		93220DD029C41271009F22C9 /* MyDoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93220DDD29C41280009F22C9 /* DoomEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomEngine.swift; sourceTree = "<group>"; };
+		93220DDF29C412B1009F22C9 /* doom1.wad */ = {isa = PBXFileReference; lastKnownFileType = file; path = doom1.wad; sourceTree = "<group>"; };
+		93220DE129C412C5009F22C9 /* WADReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADReader.swift; sourceTree = "<group>"; };
+		93220DE329C57409009F22C9 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		93220DE529C57ADA009F22C9 /* MapVertexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVertexView.swift; sourceTree = "<group>"; };
+		93220DE729C5A8DF009F22C9 /* Lump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lump.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93220DEB29C67789009F22C9 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +109,17 @@
 		93220DB129C41270009F22C9 /* MyDoom */ = {
 			isa = PBXGroup;
 			children = (
+				93220DDF29C412B1009F22C9 /* doom1.wad */,
 				93220DB229C41270009F22C9 /* MyDoomApp.swift */,
-				93220DB429C41270009F22C9 /* ContentView.swift */,
+				93220DB429C41270009F22C9 /* MapListView.swift */,
+				93220DE529C57ADA009F22C9 /* MapVertexView.swift */,
+				93220DDD29C41280009F22C9 /* DoomEngine.swift */,
+				93220DE129C412C5009F22C9 /* WADReader.swift */,
+				93220DE729C5A8DF009F22C9 /* Lump.swift */,
 				93220DB629C41271009F22C9 /* Assets.xcassets */,
 				93220DB829C41271009F22C9 /* MyDoom.entitlements */,
 				93220DB929C41271009F22C9 /* Preview Content */,
+				93220DE329C57409009F22C9 /* Map.swift */,
 			);
 			path = MyDoom;
 			sourceTree = "<group>";
@@ -145,6 +165,9 @@
 			dependencies = (
 			);
 			name = MyDoom;
+			packageProductDependencies = (
+				93220DEA29C67789009F22C9 /* ComposableArchitecture */,
+			);
 			productName = MyDoom;
 			productReference = 93220DAF29C41270009F22C9 /* MyDoom.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 93220DA629C41270009F22C9;
+			packageReferences = (
+				93220DE929C67789009F22C9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 93220DB029C41270009F22C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93220DBB29C41271009F22C9 /* Preview Assets.xcassets in Resources */,
+				93220DE029C412B1009F22C9 /* doom1.wad in Resources */,
 				93220DB729C41271009F22C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93220DB529C41270009F22C9 /* ContentView.swift in Sources */,
+				93220DE429C57409009F22C9 /* Map.swift in Sources */,
+				93220DE629C57ADA009F22C9 /* MapVertexView.swift in Sources */,
+				93220DE829C5A8DF009F22C9 /* Lump.swift in Sources */,
+				93220DDE29C41280009F22C9 /* DoomEngine.swift in Sources */,
+				93220DE229C412C5009F22C9 /* WADReader.swift in Sources */,
+				93220DB529C41270009F22C9 /* MapListView.swift in Sources */,
 				93220DB329C41270009F22C9 /* MyDoomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93220DE929C67789009F22C9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93220DEA29C67789009F22C9 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93220DE929C67789009F22C9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93220DA729C41270009F22C9 /* Project object */;
 }
