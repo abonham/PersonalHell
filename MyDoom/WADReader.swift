@@ -82,6 +82,16 @@ struct WADBundle {
         reader.directory
     }
     
+    var mapNames: [String] {
+        dir.filter {
+            $0.name.wholeMatch(of: MapSectionNames.marker) != nil
+        }.map(\.name)
+    }
+    
+    var maps: [String: Map] {
+        Dictionary(uniqueKeysWithValues: mapNames.map { name in self[name]! }.map { ($0.first!.name, Map(with: $0, from: wad)) })
+    }
+    
     init(reader: WADReader? = nil) throws {
         guard let reader else {
             self.reader = try WADReader.default()

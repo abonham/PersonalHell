@@ -63,7 +63,7 @@ struct MapVertexView: View {
         aspect = boundingBox.standardized.width / boundingBox.standardized.height
     }
     
-    let dotSize = 6.0
+    let dotSize = 4.0
     
     var body: some View {
 
@@ -71,26 +71,68 @@ struct MapVertexView: View {
             context.fill(Path(CGRect(origin: .zero, size: size)), with: .color(.black))
             let s = points.standardize()
             
-            s.forEach { point in
-                let converted = convert(point: point, from: boundingBox.standardized, to: .init(origin: .zero, size: size).insetBy(dx: dotSize, dy: dotSize))
-                let x = converted.x
-                let y = converted.y
-                    context.fill(
-                        Path(ellipseIn: .init(x: x, y: y, width: dotSize, height: dotSize)),
-                        with: .color(.white)
-                    )
-            }
+            let name = map.mapData.marker.name
+            
+            context.draw(Text(name).foregroundColor(.white), in: CGRect(origin: .zero, size: size))
+            
+            let canvas = CGRect(
+                origin: .zero,
+                size: size
+            ).insetBy(dx: dotSize, dy: dotSize)
+            
+            let dotRadius = dotSize / 2
             
             map.mapData.linedefs.forEach { line in
                 let start = s[Int(line.startVertexID)]
                 let end = s[Int(line.endVertexID)]
-                let convertedStart = convert(point: start, from: boundingBox.standardized, to: .init(origin: .zero, size: size).insetBy(dx: dotSize, dy: dotSize))
-                let convertedEnd = convert(point: end, from: boundingBox.standardized, to: .init(origin: .zero, size: size).insetBy(dx: dotSize, dy: dotSize))
+                let convertedStart = convert(point: start, from: boundingBox.standardized, to: canvas)
+                let convertedEnd = convert(point: end, from: boundingBox.standardized, to: canvas)
+                
+                context.fill(
+                    Path(
+                        ellipseIn: .init(
+                            x: convertedStart.x - dotRadius,
+                            y: convertedStart.y - dotRadius,
+                            width: dotSize,
+                            height: dotSize)),
+                    with: .color(.green)
+                )
+                
+                context.fill(
+                    Path(
+                        ellipseIn: .init(
+                            x: convertedEnd.x - dotRadius,
+                            y: convertedEnd.y - dotRadius,
+                            width: dotSize,
+                            height: dotSize)),
+                    with: .color(.blue)
+                )
                 var path = Path()
                 path.move(to: convertedStart)
                 path.addLine(to: convertedEnd)
-                print(start, end)
-                context.stroke(path, with: .color(.red), style: StrokeStyle(lineWidth: 2))
+                context.stroke(path, with: .color(.red), style: StrokeStyle(lineWidth: 1))
+            }
+            
+            map.mapData
+                .things
+                .map { CGPoint(vertex: Vector2(x: $0.x, y: $0.y)) }
+                .standardize()
+                .forEach { position in
+                let convertedPosition = convert(
+                    point: position,
+                    from: boundingBox,
+                    to: canvas)
+                
+                print(convertedPosition)
+                context.fill(
+                    Path(
+                        ellipseIn: .init(
+                            x: convertedPosition.x - dotRadius,
+                            y: convertedPosition.y - dotRadius,
+                            width: dotSize * 2,
+                            height: dotSize * 2)),
+                    with: .color(.white)
+                )
             }
             
         }.aspectRatio(
