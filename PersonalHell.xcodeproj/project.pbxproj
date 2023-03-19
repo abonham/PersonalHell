@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93220DB329C41270009F22C9 /* MyDoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DB229C41270009F22C9 /* MyDoomApp.swift */; };
+		93220DB329C41270009F22C9 /* PersonalHellApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DB229C41270009F22C9 /* PersonalHellApp.swift */; };
 		93220DB529C41270009F22C9 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93220DB429C41270009F22C9 /* MapListView.swift */; };
 		93220DB729C41271009F22C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93220DB629C41271009F22C9 /* Assets.xcassets */; };
 		93220DBB29C41271009F22C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93220DBA29C41271009F22C9 /* Preview Assets.xcassets */; };
@@ -41,22 +41,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93220DAF29C41270009F22C9 /* MyDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93220DB229C41270009F22C9 /* MyDoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomApp.swift; sourceTree = "<group>"; };
+		93220DAF29C41270009F22C9 /* PersonalHell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalHell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93220DB229C41270009F22C9 /* PersonalHellApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalHellApp.swift; sourceTree = "<group>"; };
 		93220DB429C41270009F22C9 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		93220DB629C41271009F22C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93220DB829C41271009F22C9 /* MyDoom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDoom.entitlements; sourceTree = "<group>"; };
+		93220DB829C41271009F22C9 /* PersonalHell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PersonalHell.entitlements; sourceTree = "<group>"; };
 		93220DBA29C41271009F22C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		93220DC029C41271009F22C9 /* MyDoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93220DC029C41271009F22C9 /* PersonalHellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalHellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93220DC429C41271009F22C9 /* MyDoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomTests.swift; sourceTree = "<group>"; };
-		93220DCA29C41271009F22C9 /* MyDoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93220DCA29C41271009F22C9 /* PersonalHellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalHellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93220DCE29C41271009F22C9 /* MyDoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomUITests.swift; sourceTree = "<group>"; };
 		93220DD029C41271009F22C9 /* MyDoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		93220DDD29C41280009F22C9 /* DoomEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomEngine.swift; sourceTree = "<group>"; };
 		93220DDF29C412B1009F22C9 /* doom1.wad */ = {isa = PBXFileReference; lastKnownFileType = file; path = doom1.wad; sourceTree = "<group>"; };
 		93220DE129C412C5009F22C9 /* WADReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADReader.swift; sourceTree = "<group>"; };
 		93220DE329C57409009F22C9 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		93220DE529C57ADA009F22C9 /* MapVertexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVertexView.swift; sourceTree = "<group>"; };
+		93220DE529C57ADA009F22C9 /* MapVertexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapVertexView.swift; path = PersonalHell/MapVertexView.swift; sourceTree = SOURCE_ROOT; };
 		93220DE729C5A8DF009F22C9 /* Lump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lump.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 		93220DA629C41270009F22C9 = {
 			isa = PBXGroup;
 			children = (
-				93220DB129C41270009F22C9 /* MyDoom */,
+				93220DB129C41270009F22C9 /* PersonalHell */,
 				93220DC329C41271009F22C9 /* MyDoomTests */,
 				93220DCD29C41271009F22C9 /* MyDoomUITests */,
 				93220DB029C41270009F22C9 /* Products */,
@@ -99,29 +99,29 @@
 		93220DB029C41270009F22C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93220DAF29C41270009F22C9 /* MyDoom.app */,
-				93220DC029C41271009F22C9 /* MyDoomTests.xctest */,
-				93220DCA29C41271009F22C9 /* MyDoomUITests.xctest */,
+				93220DAF29C41270009F22C9 /* PersonalHell.app */,
+				93220DC029C41271009F22C9 /* PersonalHellTests.xctest */,
+				93220DCA29C41271009F22C9 /* PersonalHellUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93220DB129C41270009F22C9 /* MyDoom */ = {
+		93220DB129C41270009F22C9 /* PersonalHell */ = {
 			isa = PBXGroup;
 			children = (
 				93220DDF29C412B1009F22C9 /* doom1.wad */,
-				93220DB229C41270009F22C9 /* MyDoomApp.swift */,
+				93220DB229C41270009F22C9 /* PersonalHellApp.swift */,
 				93220DB429C41270009F22C9 /* MapListView.swift */,
 				93220DE529C57ADA009F22C9 /* MapVertexView.swift */,
 				93220DDD29C41280009F22C9 /* DoomEngine.swift */,
 				93220DE129C412C5009F22C9 /* WADReader.swift */,
 				93220DE729C5A8DF009F22C9 /* Lump.swift */,
 				93220DB629C41271009F22C9 /* Assets.xcassets */,
-				93220DB829C41271009F22C9 /* MyDoom.entitlements */,
+				93220DB829C41271009F22C9 /* PersonalHell.entitlements */,
 				93220DB929C41271009F22C9 /* Preview Content */,
 				93220DE329C57409009F22C9 /* Map.swift */,
 			);
-			path = MyDoom;
+			path = PersonalHell;
 			sourceTree = "<group>";
 		};
 		93220DB929C41271009F22C9 /* Preview Content */ = {
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93220DAE29C41270009F22C9 /* MyDoom */ = {
+		93220DAE29C41270009F22C9 /* PersonalHell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93220DD429C41271009F22C9 /* Build configuration list for PBXNativeTarget "MyDoom" */;
+			buildConfigurationList = 93220DD429C41271009F22C9 /* Build configuration list for PBXNativeTarget "PersonalHell" */;
 			buildPhases = (
 				93220DAB29C41270009F22C9 /* Sources */,
 				93220DAC29C41270009F22C9 /* Frameworks */,
@@ -164,17 +164,17 @@
 			);
 			dependencies = (
 			);
-			name = MyDoom;
+			name = PersonalHell;
 			packageProductDependencies = (
 				93220DEA29C67789009F22C9 /* ComposableArchitecture */,
 			);
 			productName = MyDoom;
-			productReference = 93220DAF29C41270009F22C9 /* MyDoom.app */;
+			productReference = 93220DAF29C41270009F22C9 /* PersonalHell.app */;
 			productType = "com.apple.product-type.application";
 		};
-		93220DBF29C41271009F22C9 /* MyDoomTests */ = {
+		93220DBF29C41271009F22C9 /* PersonalHellTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93220DD729C41271009F22C9 /* Build configuration list for PBXNativeTarget "MyDoomTests" */;
+			buildConfigurationList = 93220DD729C41271009F22C9 /* Build configuration list for PBXNativeTarget "PersonalHellTests" */;
 			buildPhases = (
 				93220DBC29C41271009F22C9 /* Sources */,
 				93220DBD29C41271009F22C9 /* Frameworks */,
@@ -185,14 +185,14 @@
 			dependencies = (
 				93220DC229C41271009F22C9 /* PBXTargetDependency */,
 			);
-			name = MyDoomTests;
+			name = PersonalHellTests;
 			productName = MyDoomTests;
-			productReference = 93220DC029C41271009F22C9 /* MyDoomTests.xctest */;
+			productReference = 93220DC029C41271009F22C9 /* PersonalHellTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		93220DC929C41271009F22C9 /* MyDoomUITests */ = {
+		93220DC929C41271009F22C9 /* PersonalHellUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93220DDA29C41271009F22C9 /* Build configuration list for PBXNativeTarget "MyDoomUITests" */;
+			buildConfigurationList = 93220DDA29C41271009F22C9 /* Build configuration list for PBXNativeTarget "PersonalHellUITests" */;
 			buildPhases = (
 				93220DC629C41271009F22C9 /* Sources */,
 				93220DC729C41271009F22C9 /* Frameworks */,
@@ -203,9 +203,9 @@
 			dependencies = (
 				93220DCC29C41271009F22C9 /* PBXTargetDependency */,
 			);
-			name = MyDoomUITests;
+			name = PersonalHellUITests;
 			productName = MyDoomUITests;
-			productReference = 93220DCA29C41271009F22C9 /* MyDoomUITests.xctest */;
+			productReference = 93220DCA29C41271009F22C9 /* PersonalHellUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 93220DAA29C41270009F22C9 /* Build configuration list for PBXProject "MyDoom" */;
+			buildConfigurationList = 93220DAA29C41270009F22C9 /* Build configuration list for PBXProject "PersonalHell" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -247,9 +247,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93220DAE29C41270009F22C9 /* MyDoom */,
-				93220DBF29C41271009F22C9 /* MyDoomTests */,
-				93220DC929C41271009F22C9 /* MyDoomUITests */,
+				93220DAE29C41270009F22C9 /* PersonalHell */,
+				93220DBF29C41271009F22C9 /* PersonalHellTests */,
+				93220DC929C41271009F22C9 /* PersonalHellUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 				93220DDE29C41280009F22C9 /* DoomEngine.swift in Sources */,
 				93220DE229C412C5009F22C9 /* WADReader.swift in Sources */,
 				93220DB529C41270009F22C9 /* MapListView.swift in Sources */,
-				93220DB329C41270009F22C9 /* MyDoomApp.swift in Sources */,
+				93220DB329C41270009F22C9 /* PersonalHellApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		93220DC229C41271009F22C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93220DAE29C41270009F22C9 /* MyDoom */;
+			target = 93220DAE29C41270009F22C9 /* PersonalHell */;
 			targetProxy = 93220DC129C41271009F22C9 /* PBXContainerItemProxy */;
 		};
 		93220DCC29C41271009F22C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93220DAE29C41270009F22C9 /* MyDoom */;
+			target = 93220DAE29C41270009F22C9 /* PersonalHell */;
 			targetProxy = 93220DCB29C41271009F22C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -443,10 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyDoom/MyDoom.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PersonalHell/PersonalHell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyDoom/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PersonalHell/Preview Content\"";
 				DEVELOPMENT_TEAM = V2VL3Q3756;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -466,7 +466,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.MyDoom;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.PersonalHell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -481,10 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyDoom/MyDoom.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PersonalHell/PersonalHell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyDoom/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PersonalHell/Preview Content\"";
 				DEVELOPMENT_TEAM = V2VL3Q3756;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -504,7 +504,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.MyDoom;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bonham.PersonalHell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -533,7 +533,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDoom.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyDoom";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalHell.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PersonalHell";
 			};
 			name = Debug;
 		};
@@ -556,7 +556,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDoom.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyDoom";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalHell.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PersonalHell";
 			};
 			name = Release;
 		};
@@ -578,7 +578,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyDoom;
+				TEST_TARGET_NAME = PersonalHell;
 			};
 			name = Debug;
 		};
@@ -600,14 +600,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyDoom;
+				TEST_TARGET_NAME = PersonalHell;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93220DAA29C41270009F22C9 /* Build configuration list for PBXProject "MyDoom" */ = {
+		93220DAA29C41270009F22C9 /* Build configuration list for PBXProject "PersonalHell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93220DD229C41271009F22C9 /* Debug */,
@@ -616,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93220DD429C41271009F22C9 /* Build configuration list for PBXNativeTarget "MyDoom" */ = {
+		93220DD429C41271009F22C9 /* Build configuration list for PBXNativeTarget "PersonalHell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93220DD529C41271009F22C9 /* Debug */,
@@ -625,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93220DD729C41271009F22C9 /* Build configuration list for PBXNativeTarget "MyDoomTests" */ = {
+		93220DD729C41271009F22C9 /* Build configuration list for PBXNativeTarget "PersonalHellTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93220DD829C41271009F22C9 /* Debug */,
@@ -634,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93220DDA29C41271009F22C9 /* Build configuration list for PBXNativeTarget "MyDoomUITests" */ = {
+		93220DDA29C41271009F22C9 /* Build configuration list for PBXNativeTarget "PersonalHellUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93220DDB29C41271009F22C9 /* Debug */,

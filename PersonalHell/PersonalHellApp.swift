@@ -1,5 +1,5 @@
 //
-//  MyDoomApp.swift
+//  PersonalHell.swift
 //  MyDoom
 //
 //  Created by Aaron Bonham on 17/3/2023.
@@ -62,7 +62,7 @@ struct NavView: View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             NavigationSplitView {
                 List {
-                        ForEach(MyDoomApp.wad.mapNames, id: \.self) { mapName in
+                        ForEach(PersonalHellApp.wad.mapNames, id: \.self) { mapName in
                             NavigationLink(
                                         destination: IfLetStore(
                                           self.store.scope(
@@ -70,7 +70,7 @@ struct NavView: View {
                                             action: MapVizFeature.Action.selectMap
                                           )
                                         ) { _ in
-                                            MapVertexView(map: MyDoomApp.wad.maps[mapName]!)
+                                            MapVertexView(map: PersonalHellApp.wad.maps[mapName]!)
                                         },
                                         tag: mapName,
                                         selection: viewStore.binding(
@@ -84,7 +84,7 @@ struct NavView: View {
                 }.listStyle(.sidebar)
             } detail: {
                 
-                                            MapVertexView(map: MyDoomApp.map)
+                                            MapVertexView(map: PersonalHellApp.map)
             }
         }
     }
@@ -92,7 +92,7 @@ struct NavView: View {
 
 
 @main
-struct MyDoomApp: App {
+struct PersonalHellApp: App {
     
     static let wad = try! WADBundle()
     

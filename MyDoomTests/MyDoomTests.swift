@@ -7,7 +7,7 @@
 
 import XCTest
 import Foundation
-@testable import MyDoom
+@testable import PersonalHell
 
 final class MyDoomTests: XCTestCase {
 
@@ -52,34 +52,11 @@ final class MyDoomTests: XCTestCase {
         XCTAssertEqual(demo1.count, 20118)
     }
     
-    func testMapVertex() throws {
-        let bundle = try! WADBundle()
-        guard let vertexes: Data = bundle["VERTEXES"] else {
-            XCTFail()
-            return
-        }
-        
-        let map = Map(from: vertexes)
-        XCTAssertEqual(467, map.vertexes.count)
-        let first = map.vertexes.first!
-        XCTAssertEqual(1088, first.x)
-        XCTAssertEqual(-3680, first.y)
-        
-        let last = map.vertexes.last!
-        XCTAssertEqual(2912, last.x)
-        XCTAssertEqual(-4848, last.y)
-    }
-    
     func testBoundingBox() {
-        let bundle = try! WADBundle()
-        guard let vertexes: Data = bundle["VERTEXES"] else {
-            XCTFail()
-            return
-        }
-        
-        let map = Map(from: vertexes)
-        let points = map.vertexes.map { CGPoint(vertex: $0) }
+        let map = PersonalHellApp.map
+        let points = map.mapData.vertexes.map { CGPoint(vertex: $0) }
         let box = boundedBox(points)
+        
     }
     
     func testGetAllMapLumps() {

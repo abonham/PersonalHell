@@ -144,6 +144,6 @@ struct MapVertexView: View {
 
 struct MapVertexView_Previews: PreviewProvider {
     static var previews: some View {
-        MapVertexView(map: MyDoomApp.map)
+        MapVertexView(map: PersonalHellApp.map)
     }
 }

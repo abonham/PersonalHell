@@ -9,7 +9,6 @@ import Foundation
 
 struct CStr_8 {
     let str: (CChar, CChar, CChar, CChar, CChar, CChar, CChar, CChar)
-//    let r: [CChar, 8]
 }
 
 extension CStr_8: CustomDebugStringConvertible {
