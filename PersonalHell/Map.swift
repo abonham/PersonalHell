@@ -97,7 +97,7 @@ typealias MapReject = [UInt8]
 typealias RawBlockMap = [UInt8]
 
 enum MapSectionNames {
-    static let marker = /E[0-9]M[0-9]/
+    static let marker = /(E[0-9]M[0-9]|MAP[0-9][0-9])/
     static let things = "THINGS"
     static let linedefs = "LINEDEFS"
     static let sidedefs = "SIDEDEFS"

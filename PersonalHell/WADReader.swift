@@ -60,12 +60,16 @@ struct WADHeaders {
     }
 }
 
+extension WADHeaders: Equatable {}
+
 struct LumpInfo {
     let offset: CInt
     let size: CInt
     let name: String
     let index: Int32
 }
+
+extension LumpInfo: Equatable {}
 
 extension LumpInfo: Identifiable {
     var id: Int32 { index }
@@ -130,8 +134,16 @@ struct WADReader {
         return WADReader(wadData: data, wadHeaders: headers, directory: directory)
     }
     
-    static func open(path: String? = nil) throws -> Data {
-        guard let fileURL = Bundle.main.url(forResource: "doom1", withExtension: "wad") else {
+    static func from(url: URL?) throws -> WADReader {
+        let data = try open(url: url)
+        let headers = try readHeaders(wad: data)
+        let directory = try generateDirectory(wad: data)
+        
+        return WADReader(wadData: data, wadHeaders: headers, directory: directory)
+    }
+    
+    static func open(url: URL? = nil) throws -> Data {
+        guard let fileURL = url ?? Bundle.main.url(forResource: "doom1", withExtension: "wad") else {
             throw WADError.noFile
         }
         return try Data(contentsOf: fileURL)
@@ -153,12 +165,14 @@ struct WADReader {
             let size = try DataReader.readInt(wad, offset: Int(offset) + 4)
             let name = try DataReader.readString(wad, offset: Int(offset) + 8, length: 8)
             let info = LumpInfo(offset: lumpOffset, size: size, name: name, index: i)
-//            print("\(i): \(info)")
             lumps.append(info)
         }
         return lumps
     }
 }
+
+extension WADReader: Equatable {}
+extension WADBundle: Equatable {}
 
 extension Array where Element == LumpInfo {
     var totalSize: Int {

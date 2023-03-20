@@ -5,12 +5,14 @@
 //  Created by Aaron Bonham on 17/3/2023.
 //
 
+import UniformTypeIdentifiers
 import SwiftUI
 import ComposableArchitecture
 
 struct NavFeature: ReducerProtocol {
     struct State: Equatable {
         var selection: Identified<String, String>?
+        var wadFile: URL?
     }
     
     struct Row: Equatable, Identifiable {
@@ -33,6 +35,7 @@ struct NavFeature: ReducerProtocol {
 
 struct MapVizFeature: ReducerProtocol {
     struct State: Equatable {
+        var wad: WADBundle
         var selection: Identified<String, String>?
     }
     
@@ -60,9 +63,10 @@ struct NavView: View {
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
+            let wad = viewStore.state.wad
             NavigationSplitView {
                 List {
-                        ForEach(PersonalHellApp.wad.mapNames, id: \.self) { mapName in
+                    ForEach(wad.mapNames, id: \.self) { mapName in
                             NavigationLink(
                                         destination: IfLetStore(
                                           self.store.scope(
@@ -70,7 +74,7 @@ struct NavView: View {
                                             action: MapVizFeature.Action.selectMap
                                           )
                                         ) { _ in
-                                            MapVertexView(map: PersonalHellApp.wad.maps[mapName]!)
+                                            MapVertexView(map: wad.maps[mapName]!)
                                         },
                                         tag: mapName,
                                         selection: viewStore.binding(
@@ -84,12 +88,30 @@ struct NavView: View {
                 }.listStyle(.sidebar)
             } detail: {
                 
-                                            MapVertexView(map: PersonalHellApp.map)
+                Text("select a map to get started")
+                //                                            MapVertexView(map: PersonalHellApp.map)
             }
         }
     }
 }
 
+struct WADDocument: FileDocument {
+    static var readableContentTypes = [UTType.data]
+    let wad: Data
+    
+    init(configuration: ReadConfiguration) throws {
+        guard let data = configuration.file.serializedRepresentation else {
+            throw URLError(.badURL)
+        }
+        self.wad = data
+    }
+    
+    func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
+        FileWrapper()
+    }
+    
+    
+}
 
 @main
 struct PersonalHellApp: App {
@@ -99,14 +121,19 @@ struct PersonalHellApp: App {
     static let e1m1: [LumpInfo] = Self.wad["E1M1"]!
     
     static let map = Map(with: Self.e1m1, from: Self.wad.wad)
+    
     var body: some Scene {
-        WindowGroup {
-            NavView(
-                store: Store(
-                    initialState: MapVizFeature.State(),
-                    reducer: MapVizFeature()
+        DocumentGroup(viewing: WADDocument.self) { wadData in
+            if let reader = try? WADReader.from(url: wadData.fileURL),
+                let bun = try? WADBundle(reader: reader) {
+                
+                NavView(
+                    store: Store(
+                        initialState: MapVizFeature.State(wad: bun),
+                        reducer: MapVizFeature()
+                    )
                 )
-            )
+            }
         }
     }
 }
@@ -115,7 +142,7 @@ struct App_Preview: PreviewProvider {
     static var previews: some View {
             NavView(
                 store: Store(
-                    initialState: MapVizFeature.State(),
+                    initialState: MapVizFeature.State(wad: PersonalHellApp.wad),
                     reducer: MapVizFeature()
                 )
             )
