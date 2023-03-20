@@ -87,9 +87,7 @@ struct NavView: View {
                         }
                 }.listStyle(.sidebar)
             } detail: {
-                
-                Text("select a map to get started")
-                //                                            MapVertexView(map: PersonalHellApp.map)
+                Text("Select a map to get started")
             }
         }
     }

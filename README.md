@@ -4,3 +4,5 @@ This was just a quick shot at learning something new, inspired by a [video](http
 
 Also tried to incorporate [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) by the lovely people over at [Point Free](https://www.pointfree.co).
 
+Includes the original Doom shareware WAD file to get started. I think that's ok? Let me know if it's a no-no.
+
